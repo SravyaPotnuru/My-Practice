@@ -1,0 +1,18 @@
+//binary Tree Preorder Traversaal
+
+class Solution {
+public:
+    void preorder(TreeNode*&root,vector<int>&v){
+        if(root==NULL) return;
+        v.push_back(root->val);
+        preorder(root->left,v);
+        preorder(root->right,v);
+        return;
+    }
+    vector<int> preorderTraversal(TreeNode* root) {
+      vector<int>v;
+      preorder(root,v);
+      return v;  
+    }
+};
+
